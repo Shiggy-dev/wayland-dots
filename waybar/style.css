@@ -1,6 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    /*font-family: FiraCode Nerd Font,FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    font-family: FiraCode Nerd Font, monospace, Twemoji;
     font-size: 13px;
 }
 
@@ -49,9 +50,10 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 7px;
     background-color: transparent;
     color: #ffffff;
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
 }
 
 #workspaces button:hover {
@@ -94,7 +96,7 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 5px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -114,6 +116,7 @@ button:hover {
 #battery {
     background-color: #ffffff;
     color: #000000;
+    padding-right: 15px;
 }
 
 #battery.charging, #battery.plugged {
@@ -161,6 +164,7 @@ label:focus {
 
 #network {
     background-color: #2980b9;
+    padding-right: 15px;
 }
 
 #network.disconnected {
@@ -189,7 +193,7 @@ label:focus {
 #custom-media {
     background-color: #66cc99;
     color: #2a5c45;
-    min-width: 100px;
+    min-width: 20px;
 }
 
 #custom-media.custom-spotify {
@@ -198,6 +202,26 @@ label:focus {
 
 #custom-media.custom-vlc {
     background-color: #ffa000;
+}
+
+#custom-media-previous {
+	background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 20px;
+    padding-right: 4px;
+}
+
+#custom-media-play-pause {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 20px;
+}
+
+#custom-media-next {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 20px;
+    padding-right: 5px;
 }
 
 #temperature {

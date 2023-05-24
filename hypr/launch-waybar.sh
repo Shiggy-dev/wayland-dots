@@ -1,11 +1,7 @@
 #!/bin/bash
 
-CONFIG_FILES="$HOME/.config/waybar/config.jsonc $HOME/.config/waybar/style.css"
+# Terminate already running bar instances
+killall -q waybar
 
-trap "killall -SIGUSR2 waybar" EXIT
-
-while true; do
-    waybar &
-    inotifywait -e create,modify $CONFIG_FILES
-    killall -SIGUSR2 waybar
-done
+# Launch Waybar, using default config location ~/.config/polybar/config.ini
+waybar 2>&1 | tee -a /tmp/waybar.log & disown
