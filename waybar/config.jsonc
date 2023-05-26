@@ -36,14 +36,17 @@
 		// "timezone": "America/New_York",
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 		"format": " {:%H:%M}",
-		"format-alt": " {:%Y-%m-%d}"
+		"format-alt": " {:%a, %b %d, %Y %T}",
+		"interval": 1
 	},
 	"cpu": {
-		"format": "{usage}% ",
-		"tooltip": false
+		"format": " {usage}%",
+		"tooltip": false,
+		"interval": 2
 	},
 	"memory": {
-		"format": "{}% "
+		"format": " {}%",
+		"interval": 2
 	},
 	"temperature": {
 		// "thermal-zone": 2,
@@ -55,7 +58,7 @@
 	},
 	"backlight": {
 		// "device": "acpi_video1",
-		"format": "{percent}% {icon}",
+		"format": "{icon} {percent}%",
 		"format-icons": ["", "", "", "", "", "", "", "", ""]
 	},
 	"battery": {
@@ -64,9 +67,9 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{capacity}% {icon}",
-		"format-charging": "{capacity}% ",
-		"format-plugged": "{capacity}% ",
+		"format": "{icon}  {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-plugged": " {capacity}%",
 		"format-alt": "{time} {icon}",
 		// "format-good": "", // An empty format will hide the module
 		// "format-full": "",
@@ -87,7 +90,7 @@
 	},
 	"pulseaudio": {
 		// "scroll-step": 1, // %, can be a float
-		"format": "{volume}% {icon}",
+		"format": "{icon} {volume}%",
 		"format-bluetooth": "{volume}% {icon} {format_source}",
 		"format-bluetooth-muted": " {icon} {format_source}",
 		"format-muted": " {format_source}",
@@ -108,6 +111,7 @@
 		"format": "{icon} {}",
 		"return-type": "json",
 	//	"max-length": 400,
+		"tooltip": false,
 		"on-click": "hyprctl dispatcher focuswindow Spotify",
 		"format-icons": {
 			"spotify": "",
@@ -121,6 +125,7 @@
 	"custom/media-next": {
 		"format": "{icon}",
 		"on-click": "playerctl next -p spotify",
+		"tooltip": false,
 		"format-icons": {
 			"default": ""
 		}
@@ -128,6 +133,7 @@
 	"custom/media-play-pause": {
 		"format": "{icon}",
 		"on-click": "playerctl play-pause -p spotify",
+		"tooltip": false,
 		"format-icons": {
 			"playing": "",
 			"paused": "",
@@ -137,6 +143,7 @@
 	"custom/media-previous": {
 		"format": "{icon}",
 		"on-click": "playerctl previous -p spotify",
+		"tooltip": false,
 		"format-icons": {
 			"default": ""
 		}
